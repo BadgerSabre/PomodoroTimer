@@ -5,10 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PomodoroTimer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Margin="88,117,467,217">Start Pomodoro</Button>
-        <Button Margin="455,117,116,217">Short Break</Button>
-        <TextBlock Margin="210,284,230,57" RenderTransformOrigin="0.501,0.581">Display Timer Here!</TextBlock>
+        Title="Pomodoro Timer" Height="450" Width="800">
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button>Pomodoro</Button>
+        <Button Grid.Column="1">Break Time</Button>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Display Timer</TextBlock>
+
     </Grid>
 </Window>
